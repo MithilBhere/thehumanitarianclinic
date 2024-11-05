@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Humanitarian Clinic:Skin, Hair, and Laser Center</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="JS/scripts.js"></script>
+</head>
+<body>
+
+    <header id="header">
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="#"><img src="images/logo1.png" alt="The Humanitarian Clinic Logo" class="logo"></a>
+                <a href="#"><h1>THE HUMANITARIAN CLINIC :</h1>
+                <h2 class="navbar-title">SKIN, HAIR & LASER CENTRE</h2></a>
+            </div>
+            <div class="navbar-right">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Menu icon for mobile -->
+                <nav id="nav-menu" class="hidden">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="/components/aboutus.html">About Us</a></li>
+                        <li><a href="/components/treatment.html">Treatments</a></li>
+                        <li><a href="/components/specialty.html">Specialist</a></li>
+                        <li><a href="/components/contactus.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-text">
+        <h2>Welcome to the Humanitarian Clinic</h2>
+        <p>Expert care for skin, hair, and advanced laser Treatments</p>
+        <a href="#contact" class="btn" onclick="changeButtonColor(this)">Get in Touch</a>
+        
+    </div>
+    <hr class="hero-divider">
+    
+    <!--Gallery Section -->
+
+    <div class="gallery-section">
+        <h2 class="gallery-heading">Gallery</h2>
+        <div class="gallery">
+            <div class="gallery-wrapper">
+            <!-- 14 images for the gallery -->
+            <img src="images/gallery/1.jpeg" alt="Gallery Image 1" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/3.jpeg" alt="Gallery Image 3" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/4.jpeg" alt="Gallery Image 4" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/5.jpeg" alt="Gallery Image 5" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/7.jpeg" alt="Gallery Image 7" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/10.jpeg" alt="Gallery Image 10" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/11.jpeg" alt="Gallery Image 11" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/12.jpeg" alt="Gallery Image 12" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/13.jpeg" alt="Gallery Image 13" class="gallery-image" onclick="toggleImage(this)">
+            <img src="images/gallery/14.jpeg" alt="Gallery Image 14" class="gallery-image" onclick="toggleImage(this)">
+            <!-- Continue adding images up to image14.jpg -->
+        </div>
+        <div id="overlay" onclick="closeImage()"></div>
+    </div>
+
+    <!--Equipment Section-->
+
+    <div class="equipment-section">
+        <h2 class="equipment-heading">Equipment</h2>
+        <div class="equipment">
+            <div class="equipment-wrapper" id="equipmentGallery">
+                <!-- Equipment Images -->
+                <img src="images/equipment/1.jpg" alt="Equipment Image 1" class="equipment-image">
+                <img src="images/equipment/2.jpg" alt="Equipment Image 2" class="equipment-image">
+                <img src="images/equipment/3.jpg" alt="Equipment Image 3" class="equipment-image">
+                <img src="images/equipment/4.jpg" alt="Equipment Image 4" class="equipment-image">
+                <img src="images/equipment/5.jpg" alt="Equipment Image 5" class="equipment-image">
+                <img src="images/equipment/6.jpg" alt="Equipment Image 6" class="equipment-image">
+                <img src="images/equipment/7.jpg" alt="Equipment Image 7" class="equipment-image">
+                <img src="images/equipment/8.jpg" alt="Equipment Image 8" class="equipment-image">
+                <img src="images/equipment/9.jpg" alt="Equipment Image 9" class="equipment-image">
+                <img src="images/equipment/10.jpg" alt="Equipment Image 10" class="equipment-image">
+                <img src="images/equipment/11.jpg" alt="Equipment Image 11" class="equipment-image">
+                <img src="images/equipment/12.jpg" alt="Equipment Image 12" class="equipment-image">
+                <img src="images/equipment/13.jpg" alt="Equipment Image 13" class="equipment-image">
+                <img src="images/equipment/14.jpg" alt="Equipment Image 14" class="equipment-image">
+                <img src="images/equipment/15.jpg" alt="Equipment Image 15" class="equipment-image">
+                <img src="images/equipment/16.jpg" alt="Equipment Image 16" class="equipment-image">
+                <img src="images/equipment/17.jpg" alt="Equipment Image 17" class="equipment-image">
+            </div>
+        </div>
+    </div>
+    
+    <!--About Us Section-->
+    
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Dr. Satish S. Savant is Founder with Experience of  30+ Years & Dr. Sushil S Savant is Director with Experience Of 7+ Years. The Humanitarian Clinic is established in year 1989. We are experts in Skin Care, Hair and Advanced Laser Treatments. <br>
+        <a href="/components/aboutus.html" class="btn" onclick="changeButtonColor(this)">Read More</a>
+    </section>
+    
+    <section id="Treatments" class="section">
+        <h2>Our Treatments</h2>
+        <div class="Treatments-container">
+            <div class="Treatment-card">
+                <h3>Skin Treatment</h3>
+                <p>Advanced skin care for rejuvenation, hydration, and health.</p>
+                <a href="/components/treatment.html" class="btn" onclick="changeButtonColor(this)">Read More</a>
+            </div>
+            <div class="Treatment-card">
+                <h3>Hair Restoration</h3>
+                <p>Effective hair restoration solutions tailored for you.</p>
+                <a href="/components/treatment.html" class="btn" onclick="changeButtonColor(this)">Read More</a>
+            </div>
+            <div class="Treatment-card">
+                <h3>Laser Therapy</h3>
+                <p>Cutting-edge laser Treatments for various skin concerns.</p>
+                <a href="/components/treatment.html" class="btn" onclick="changeButtonColor(this)">Read More</a>
+            </div>
+            <div class="Treatment-card">
+                <h3>Anti-Aging Solutions</h3>
+                <p>Modern anti-aging solutions to help you look your best.</p>
+                <a href="/components/treatment.html" class="btn" onclick="changeButtonColor(this)">Read More</a>
+            </div>
+        </div>
+        <a href="/components/treatment.html" class="btn" onclick="changeButtonColor(this)">Read More</a>
+    </section>
+    
+    <section id="specialty" class="section">
+        <h2>Specialist</h2>
+        <p>Reveal your skin's true beauty with our skilled specialists! Whether tackling stubborn acne or turning back the clock on aging, we provide customized treatments that empower your glow. Discover the secret to radiant skin—your best self is just a treatment away! <br>To know more about our specialties, click the "Read More" button.</p>
+        <a href="/components/specialty.html" class="btn" onclick="changeButtonColor(this)">Read More</a>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Get in touch for consultations and appointments.</p>
+        <p>Email: thehumanitarianclinic@gmail.com</p>
+        <p>Phone: +91 9321652496 / +91 9702891624</p>
+        <a href="/components/contactus.html" class="btn" onclick="changeButtonColor(this)">Read More</a>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="working-hours fade-in">
+                <h4>Operating Hours</h4>
+                <ul>
+                    <li>
+                        <span>Monday - Friday:</span>
+                        <div class="timing">
+                            <div><strong>Morning:</strong> 8:30 AM - 1:00 PM</div>
+                            <div><strong>Evening:</strong> 4:00 PM - 7:30 PM</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Saturday:</span>
+                        <div class="timing">
+                            <div>Closed</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Sunday:</span>
+                        <div class="timing">
+                            <div>Closed</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="social-links fade-in">
+                <h4>Connect with Us</h4>
+                <div class="icon-group">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom fade-in">
+            <p>&copy; Made By S & M 2024</p>
+        </div>
+    </footer>
+
+</body>
+</html>

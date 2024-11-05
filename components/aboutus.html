@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/scripts.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="/index.html"><img src="/images/logo1.png" alt="The Humanitarian Clinic Logo" class="logo"></a>
+                <a href="/index.html"><h1>THE HUMANITARIAN CLINIC :</h1>
+                <h2 class="navbar-title">SKIN, HAIR & LASER CENTRE</h2></a>
+            </div>
+            <div class="navbar-right">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Menu icon for mobile -->
+                <nav id="nav-menu" class="hidden">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/components/aboutus.html">About Us</a></li>
+                        <li><a href="/components/treatment.html">Treatments</a></li>
+                        <li><a href="/components/specialty.html">Specialist</a></li>
+                        <li><a href="/components/contactus.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="person-card">
+                <div class="card-inner">
+                    <img src="/images/Satish.jpg" alt="Founder" class="person-image">
+                    <h3>Dr. Satish S. Savant<br>(Founder)</h3>
+                    <p class="summary">Dr. Satish S. Savant is the esteemed founder and director of the Humanitarian Clinic: Skin, Hair, and Laser Centre in Mumbai.</p>
+                    <a href="/components/founder-details.html" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="person-card">
+                <div class="card-inner">
+                    <img src="/images/2.JPG" alt="Director" class="person-image">
+                    <h3>Dr. Sushil S. Savant<br>(Director)</h3>
+                    <p class="summary">Dr. Sushil S. Savant serves as the chief consultant dermatosurgeon at The Humanitarian Clinic: Skin, Hair, and Laser Centre in Mumbai</p>
+                    <a href="/components/director-details.html" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Divider between sections -->
+        <hr class="section-divider">
+    
+        
+        <!-- Hospital Information -->
+        <div class="hospital-info">
+            <h3>Our Hospital</h3>
+            <p>The Humanitarian Clinic: Skin, Hair, and Laser Center is dedicated to providing top-quality dermatological and aesthetic care, with a focus on compassion, expertise, and innovation. Established in 1989, we specialize in advanced treatments for skin and hair, equipped with state-of-the-art technology in laser and aesthetic medicine.</p>
+            
+            <div class="hospital-mission">
+                <p><strong>Mission:</strong> To deliver compassionate, high-quality dermatological and aesthetic care for all.</p>
+                <p><strong>Vision:</strong> To lead in dermatology and aesthetic services, continually advancing our treatments and patient care.</p>
+            </div>
+            
+            <p>Located in Andheri, Mumbai, our clinic has a legacy of growth and commitment to excellence, driven by a team of skilled professionals. Under the leadership of Dr. Satish S. Savant, we have become a trusted name in dermatology, offering a blend of traditional expertise and modern innovations to help patients achieve healthy, radiant skin.</p>
+        </div>
+    </section>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Person Image" class="modal-image">
+            <h3 id="modal-title"></h3>
+            <p id="modal-brief"></p>
+            <p id="modal-details"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="working-hours fade-in">
+                <h4>Operating Hours</h4>
+                <ul>
+                    <li>
+                        <span>Monday - Friday:</span>
+                        <div class="timing">
+                            <div><strong>Morning:</strong> 8:30 AM - 1:00 PM</div>
+                            <div><strong>Evening:</strong> 4:00 PM - 7:30 PM</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Saturday:</span>
+                        <div class="timing">
+                            <div>Closed</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Sunday:</span>
+                        <div class="timing">
+                            <div>Closed</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="social-links fade-in">
+                <h4>Connect with Us</h4>
+                <div class="icon-group">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom fade-in">
+            <p>&copy; Made By S & M 2024</p>
+        </div>
+    </footer>
+
+</body>
+</html>

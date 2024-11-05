@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialty</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/scripts.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="/index.html"><img src="/images/logo1.png" alt="The Humanitarian Clinic Logo" class="logo"></a>
+                <a href="/index.html"><h1>THE HUMANITARIAN CLINIC :</h1>
+                <h2 class="navbar-title">SKIN, HAIR & LASER CENTRE</h2></a>
+            </div>
+            <div class="navbar-right">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Menu icon for mobile -->
+                <nav id="nav-menu" class="hidden">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/components/aboutus.html">About Us</a></li>
+                        <li><a href="/components/treatment.html">Treatments</a></li>
+                        <li><a href="/components/specialty.html">Specialist</a></li>
+                        <li><a href="/components/contactus.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="section">
+        <h2 class="section-title">Specialty</h2>
+        <div class="specialties-container">
+            <div class="specialty-card" onclick="openModal('Dermatology')">
+                <h3>Dermatology, Venereology, and Leprosy</h3>
+                <p>Diagnosis and treatment of skin, hair, and nail disorders.</p>
+            </div>
+    
+            <div class="specialty-card" onclick="openModal('Dermatopathology')">
+                <h3>Dermatopathology</h3>
+                <p>Diagnosis of skin diseases at a microscopic level.</p>
+            </div>
+    
+            <div class="specialty-card" onclick="openModal('STDs and HIV')">
+                <h3>STDs and HIV</h3>
+                <p>Management of sexually transmitted infections and HIV-related skin issues.</p>
+            </div>
+    
+            <div class="specialty-card" onclick="openModal('Clinical Dermatology')">
+                <h3>Clinical Dermatology</h3>
+                <p>Treatment of skin disorders in a clinical setting.</p>
+            </div>
+    
+            <div class="specialty-card" onclick="openModal('Trichology')">
+                <h3>Trichology</h3>
+                <p>Study and treatment of hair and scalp disorders.</p>
+            </div>
+    
+            <div class="specialty-card" onclick="openModal('Dermatosurgery')">
+                <h3>Dermatosurgery</h3>
+                <p>Surgical treatment for skin conditions.</p>
+            </div>
+    
+            <div class="specialty-card" onclick="openModal('Laser Treatments')">
+                <h3>Laser Treatments</h3>
+                <p>Use of laser technology for various skin conditions.</p>
+            </div>
+    
+            <div class="specialty-card" onclick="openModal('Skin Allergy')">
+                <h3>Skin Allergy</h3>
+                <p>Diagnosis and management of allergic skin reactions.</p>
+            </div>
+    
+            <div class="specialty-card" onclick="openModal('Cosmetology')">
+                <h3>Cosmetology</h3>
+                <p>Aesthetic improvements for skin, hair, and nails.</p>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Modal for Detailed Description -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">×</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="working-hours fade-in">
+                <h4>Operating Hours</h4>
+                <ul>
+                    <li>
+                        <span>Monday - Friday:</span>
+                        <div class="timing">
+                            <div><strong>Morning:</strong> 8:30 AM - 1:00 PM</div>
+                            <div><strong>Evening:</strong> 4:00 PM - 7:30 PM</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Saturday:</span>
+                        <div class="timing">
+                            <div>Closed</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Sunday:</span>
+                        <div class="timing">
+                            <div>Closed</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="social-links fade-in">
+                <h4>Connect with Us</h4>
+                <div class="icon-group">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom fade-in">
+            <p>&copy; Made By S & M 2024</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

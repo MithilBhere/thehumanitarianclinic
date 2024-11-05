@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatments</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="/JS/scripts.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="/index.html"><img src="/images/logo1.png" alt="The Humanitarian Clinic Logo" class="logo"></a>
+                <a href="/index.html"><h1>THE HUMANITARIAN CLINIC :</h1>
+                <h2 class="navbar-title">SKIN, HAIR & LASER CENTRE</h2></a>
+            </div>
+            <div class="navbar-right">
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button> <!-- Menu icon for mobile -->
+                <nav id="nav-menu" class="hidden">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/components/aboutus.html">About Us</a></li>
+                        <li><a href="/components/treatment.html">Treatments</a></li>
+                        <li><a href="/components/specialty.html">Specialist</a></li>
+                        <li><a href="/components/contactus.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<body>
+
+
+    <section class="treatment-section">
+        <div class="container">
+            <h2 class="section-title">Our Treatments</h2>
+            <div class="treatment-grid">
+                <div class="treatment-card" onclick="showDescription('local-skin-care')">
+                    <h3>Local Skin Care</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('botox')">
+                    <h3>Botulinum Toxin (BOTOX)</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('dermal-fillers')">
+                    <h3>Dermal Fillers</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('chemical-peeling')">
+                    <h3>Chemical Peeling</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('microdermabrasion')">
+                    <h3>Microdermabrasion</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('prp')">
+                    <h3>Platelet Rich Plasma (PRP)</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('skin-grafting')">
+                    <h3>Skin Grafting</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('microneedling')">
+                    <h3>Microneedling</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('hair-transplant')">
+                    <h3>Hair Transplant</h3>
+                </div>
+                <div class="treatment-card" onclick="showDescription('acne-treatment')">
+                    <h3>Acne Treatment</h3>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Description Area -->
+        <div class="treatment-description" id="treatment-description">
+            <div class="description" id="description-content">
+                <h2 id="description-title"></h2>
+                <ul id="description-list"></ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="working-hours fade-in">
+                    <h4>Operating Hours</h4>
+                    <ul>
+                        <li>
+                            <span>Monday - Friday:</span>
+                            <div class="timing">
+                                <div><strong>Morning:</strong> 8:30 AM - 1:00 PM</div>
+                                <div><strong>Evening:</strong> 4:00 PM - 7:30 PM</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Saturday:</span>
+                            <div class="timing">
+                                <div>Closed</div>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Sunday:</span>
+                            <div class="timing">
+                                <div>Closed</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="social-links fade-in">
+                    <h4>Connect with Us</h4>
+                    <div class="icon-group">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-bottom fade-in">
+                <p>&copy; Made By S & M 2024</p>
+            </div>
+        </footer>
+
+    <script>
+        const treatments = {
+    'local-skin-care': {
+        title: 'Local Skin Care',
+        description: [
+            "Focuses on treatments and products tailored for individual skin types.",
+            "Includes cleansers, moisturizers, sunscreens, and targeted treatments.",
+            "Promotes overall skin health and addresses specific concerns like dryness, acne, or sensitivity."
+        ]
+    },
+    'botox': {
+        title: 'Botulinum Toxin (BOTOX)',
+        description: [
+            "A popular cosmetic treatment that reduces the appearance of wrinkles.",
+            "Involves injecting botulinum toxin to temporarily paralyze muscles.",
+            "Results can last three to six months."
+        ]
+    },
+    'dermal-fillers': {
+        title: 'Dermal Fillers',
+        description: [
+            "Used to restore volume and fullness to the face.",
+            "Can smooth out wrinkles and enhance facial contours.",
+            "Common ingredients include hyaluronic acid and collagen."
+        ]
+    },
+    'chemical-peeling': {
+        title: 'Chemical Peeling',
+        description: [
+            "A cosmetic treatment to improve the texture and appearance of the skin.",
+            "Involves applying a chemical solution that causes the outer layer of skin to peel off.",
+            "Can treat issues like acne scars, age spots, and fine lines."
+        ]
+    },
+    'microdermabrasion': {
+        title: 'Microdermabrasion',
+        description: [
+            "A non-invasive procedure that exfoliates the skin.",
+            "Uses tiny crystals to remove the outer layer of dead skin.",
+            "Helps improve skin tone, texture, and clarity."
+        ]
+    },
+    'prp': {
+        title: 'Platelet Rich Plasma (PRP)',
+        description: [
+            "A treatment that uses the patient's own blood to promote healing.",
+            "Involves drawing blood, processing it, and injecting it into the skin.",
+            "Can improve skin texture and stimulate hair growth."
+        ]
+    },
+    'skin-grafting': {
+        title: 'Skin Grafting',
+        description: [
+            "A surgical procedure to replace damaged skin.",
+            "Involves taking skin from one area of the body and transplanting it to another.",
+            "Commonly used for burn treatment and wound healing."
+        ]
+    },
+    'microneedling': {
+        title: 'Microneedling',
+        description: [
+            "A cosmetic procedure that uses tiny needles to create micro-injuries in the skin.",
+            "Stimulates collagen production and improves skin texture.",
+            "Effective for acne scars, stretch marks, and overall skin rejuvenation."
+        ]
+    },
+    'hair-transplant': {
+        title: 'Hair Transplant',
+        description: [
+            "A surgical technique to treat hair loss.",
+            "Involves moving hair follicles from one part of the body to balding areas.",
+            "Results in natural-looking hair growth."
+        ]
+    },
+    'acne-treatment': {
+        title: 'Acne Treatment',
+        description: [
+            "Comprises various methods to reduce acne and its scarring.",
+            "Includes topical treatments, oral medications, and procedures.",
+            "Aim to prevent breakouts and improve skin appearance."
+        ]
+    }
+};
+
+// Function to show treatment description
+function showDescription(treatmentId) {
+    const descriptionArea = document.getElementById('treatment-description');
+    const descriptionTitle = document.getElementById('description-title');
+    const descriptionList = document.getElementById('description-list');
+
+    const treatment = treatments[treatmentId];
+    if (!treatment) return;
+
+    descriptionTitle.textContent = treatment.title;
+    descriptionList.innerHTML = treatment.description.map(point => `<li>${point}</li>`).join('');
+    
+    // Show the description area
+    descriptionArea.style.display = 'block';
+
+    // Scroll to the description
+    descriptionArea.scrollIntoView({ behavior: 'smooth' });
+}
+    </script>
+
+
+</body>
+</html>

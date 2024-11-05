@@ -1,0 +1,1282 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333; /* Updated to be more neutral for readability */
+    background: linear-gradient(135deg, #FADCE4, #FFA07A);
+    transition: background-color 0.3s;
+}
+
+
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #FADCE4, #FFB5CC);
+    color: #333; /* Updated text color */
+    padding: 3em 0;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1.5s ease;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(253, 212, 223, 0.85);
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar-title {
+    font-size: 2rem; /* Adjust the size as needed */
+}
+
+.navbar-left {
+    display: flex; /* Use flex for logo and title */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the items to the right */
+    gap: 20px; /* Space between items */
+}
+
+.navbar a {
+    color: #333; /* Color for links */
+    text-decoration: none; /* Remove underline */
+    margin-left: 1em; /* Space between menu items */
+}
+
+/* Add hover effect for navbar links */
+.navbar a:hover {
+    color: #FFD700; /* Change color on hover */
+}
+
+.logo {
+    width: 80px; /* Adjusts size */
+    height: auto;
+    margin-right: 0.5em; /* Space between logo and title */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin-left: auto;
+    color: #333; /* Color for links */
+    text-decoration: none;
+}
+
+.navbar ul li a {
+    color: #333; /* Text color */
+    text-decoration: none;
+    font-size: 1.2em; /* Increase font size */
+    transition: color 0.3s, transform 0.3s;
+    margin-left: 1em;   
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-text {
+    margin-top: 8em;
+    padding: 2em 1em;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: slideInUp 1.5s ease;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+    color: #333; /* Changed to dark for better visibility */
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.hero-divider {
+    width: 50%;           /* Adjust width as desired */
+    margin: 1em auto;     /* Center the divider and add spacing */
+    border: none;
+    border-top: 1px solid #430317; /* Color matches preference */
+    opacity: 0.8;         /* Slight transparency for subtle effect */
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(45deg, #FADCE4, #FFB5CC, #FFD1DC); /* Default gradient */
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.4s ease; /* Smooth background transition */
+}
+
+/* Change color gradient on hover */
+.btn:hover {
+    background: linear-gradient(45deg, #FFABAB, #b08fdf); /* New gradient on hover */
+}
+
+/* No scaling effect on active */
+.btn:active {
+    transform: none; /* No scaling on click */
+}
+
+/* Section Styles */
+.section {
+    padding: 4em 2em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease;
+}
+
+.section h2 {
+    font-size: 2em;
+    color: #333; /* Changed to dark for better visibility */
+    margin-bottom: 1em;
+}
+
+.section p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #555;
+}
+
+/* Treatments Container */
+.Treatments-container {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Treatment Card Styles */
+.Treatment-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 1.5em;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.Treatment-card:hover {
+    transform: translateY(-10px);
+}
+
+.Treatment-card h3 {
+    color: #FFB5CC; /* Retained for accent, readable against white background */
+    margin-bottom: 0.5em;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    width: 100%;
+    margin-top: auto;
+    padding: 20px 0;
+    overflow: hidden;
+
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.footer-container .fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.footer-container .fade-in:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.footer-container .fade-in:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.footer-bottom {
+    animation: fadeInBottom 1s 1.2s forwards;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Working Hours */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 20px;
+}
+
+.working-hours {
+    width: 45%;
+    min-width: 200px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 20px;
+}
+
+.working-hours h4 {
+    color: #ffa07a;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 1s 0.8s forwards;
+}
+
+.working-hours ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.95em;
+}
+
+.working-hours li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.working-hours span {
+    color: #ffa07a;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.timing {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.timing div {
+    color: #ffffff;
+    font-size: 1em;
+    opacity: 1; /* Ensure the timing text is fully visible */
+    animation: fadeInRight 1s 1s forwards;
+}
+
+/* Social Links */
+.social-links {
+    width: 45%;
+    min-width: 200px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeIn 1s 0.9s forwards;
+}
+
+.social-links h4 {
+    color: #ffa07a;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.icon-group {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffa07a;
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 15px;
+}
+
+/* Responsive and Animated Styles */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none; /* Default gradient */;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    position: relative;
+    z-index: 11; 
+    margin-right: 10px; /* Shifts the "X" slightly to the left */
+    top: -15px; /* Moves it up slightly */
+}
+
+.close-menu {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.navbar h1 {
+    font-size: 1.8em; /* Adjust size of heading as needed */
+    margin: 0; /* Remove default margin */
+}
+
+@media (max-width: 1024px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-text p {
+        font-size: 1.1em;
+    }
+    .specialty-card {
+        width: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 1em; /* Reduce padding on smaller screens */
+    }
+
+    .navbar-right nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .hero-text {
+        margin-top: 6em;
+        padding: 1.5em 0.5em; /* Reduce padding */
+    }
+
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .Treatments-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Treatment-card {
+        width: 90%;
+        margin-bottom: 2em;
+    }
+
+    .section {
+        padding: 2em 1em;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+        position:relative;
+        z-index: 20; 
+    }
+
+    #nav-menu {
+        display: none;
+    }
+
+
+    #nav-menu.active {
+        display: block;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        right: 20px;
+        background:linear-gradient(45deg, #FADCE4, #FFB5CC, #FFD1DC); /* Default gradient */;
+        border: 1px solid #ccc;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        padding: 10px;
+        z-index: 10;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .person-card {
+        width: 100%;
+    }
+    
+    .hospital-info {
+        text-align: center;
+    }
+    .specialty-card {
+        width: 180px;
+    }
+
+    .director-section {
+        flex-direction: row;
+        text-align: left;
+    }
+    .director-image {
+        margin-right: 20px;
+    }
+
+    .founder-section {
+        flex-direction: row;
+        text-align: left;
+    }
+    .founder-image {
+        margin-right: 20px;
+    }
+
+    .modal-content {
+        width: 95%; /* Adjust width for small screens */
+    }
+
+    .treatment-card {
+        margin: 10px; /* Adjust margin for small screens */
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-card {
+        text-align: center;
+    }
+    .gallery-wrapper {
+        gap: 10px;
+    }
+    .gallery-image {
+        max-width: 150px;
+    }
+
+    .equipment-heading {
+        font-size: 2em; /* Smaller heading on medium screens */
+    }
+
+    .equipment-image {
+        width: 150px; /* Smaller images for medium screens */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .working-hours, .social-links {
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+
+    .working-hours {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1.5em;
+    }
+
+    .navbar ul {
+        gap: 0.5em;
+    }
+
+    .btn {
+        padding: 0.5em 1em;
+        font-size: 14px; /* Slightly smaller font */
+    }
+
+    .treatment-grid {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .equipment-heading {
+        font-size: 1.5em; /* Smaller heading on small screens */
+    }
+
+    .equipment-image {
+        width: 120px; /* Further limit image width */
+    }
+
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*Equipment Section */
+
+
+/* Equipment Section Wrapper */
+.equipment-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* Heading Styling */
+.equipment-heading {
+    font-size: 2.5em; /* Larger heading for emphasis */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Equipment styling */
+.equipment {
+    position: relative;
+    overflow: hidden; /* Hide overflow to create a clean look */
+    width: 100%;
+    max-width: 1200px; /* Limit width for larger screens */
+    margin: auto; /* Center the section */
+    padding: 20px;
+}
+
+.equipment-wrapper {
+    display: flex;
+    width: calc(220px * 17); /* Total width for 17 images */
+    animation: scroll 60s linear infinite; /* Set duration for continuous scrolling */
+}
+
+.equipment-image {
+    width: 220px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 10px; /* Space between images */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.equipment-image:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+/* Keyframe Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-calc(220px * 17)); } /* Scroll through all images */
+}
+
+/*Gallery Section*/
+
+/* Gallery Section Wrapper */
+.gallery-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* Heading Styling */
+.gallery-heading {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Rest of the gallery styling */
+.gallery {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.gallery-wrapper {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    gap: 15px;
+}
+
+.gallery-image {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframe Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* About Us Section */
+.about-us {
+    padding: 4em 2em;
+    text-align: center;
+    background-color:linear-gradient(45deg, #FADCE4, #FFB5CC, #FFD1DC);
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+/* Team Section */
+.about-content {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.person-card {
+    background: linear-gradient(45deg, #FADCE4, #FFB5CC, #FFD1DC);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    text-align: center;
+    width: 300px;
+}
+
+.person-image {
+    width: 300px; /* Default size */
+    height: auto;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.image-enlarged {
+    width: 250px; /* Enlarge size */
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+
+.person-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.brief {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #666; /* Optional: Style to distinguish from other text */
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.person-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 1em;
+}
+/*model for aboutus*/
+
+/* Divider Styling */
+.section-divider {
+    width: 80%;
+    margin: 2em auto;
+    border-top: 1px solid #ddd;
+}
+
+/* Hospital Information Section */
+.hospital-info {
+    text-align: left;
+    margin-top: 3em;
+    padding: 2em;
+    background-color:linear-gradient(45deg, #FADCE4, #FFB5CC, #FFD1DC);
+
+    color: #333;
+}
+
+.hospital-info h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.hospital-info p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.hospital-mission p {
+    font-size: 1em;
+    font-weight: 600;
+    color: #444;
+    margin: 0.5em 0;
+}
+
+/* Specialty Section */
+.section-title {
+    font-size: 2.2em;
+    margin-top: 40px;
+    color: #FFB5CC;
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: bold;
+    animation: fadeIn 1.2s ease;
+}
+
+.section {
+    padding: 20px;
+}
+
+.specialties-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.specialty-card {
+    background: linear-gradient(45deg, #FADCE4, #FFB5CC, #FFD1DC);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.specialty-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.specialty-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+    height: 150px;
+}
+
+.specialty-card h3 {
+    margin: 15px 0 10px;
+}
+
+.specialty-card p {
+    padding: 0 15px 15px;
+    font-size: 0.9em;
+}
+
+/* Modal Styles */
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(45deg, #FADCE4, #FFB5CC, #FFD1DC);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+    background: linear-gradient(45deg, #FADCE4, #FFB5CC, #FFD1DC); /* Changed to gradient */
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    animation: enlargeModal 0.3s ease; /* Animation effect */
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+/* Title and description styling */
+#modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#modal-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Animation for modal enlargement */
+@keyframes enlargeModal {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/*Dirtector details*/
+.director-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between image and description */
+    padding: 20px;
+}
+
+.director-image img {
+    margin-top: 40px;
+    width: 700px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.director-info {
+    max-width: 600px; /* Limit width for readability */
+    margin-top: 40px; /* Shift the description down slightly */
+}
+
+.director-info h2 {
+    margin-top: 0; /* Align the header with the top of the image */
+}
+
+.director-bio, .director-specialty, .director-experience {
+    margin-bottom: 15px;
+}
+
+.director-achievements, .director-awards {
+    padding-left: 20px; /* Indent list items */
+}
+
+
+/* Titles and Text Styling */
+.director-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.director-info h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #0073e6;
+}
+
+.director-bio, .director-specialty, .director-achievements {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Achievements with Fade-In Animation */
+.director-achievements li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+.director-achievements li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.director-achievements li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.director-achievements li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Founder Section Styles */
+.founder-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between image and description */
+    padding: 20px;
+}
+
+.founder-image img {
+    margin-top: 30px;
+    width: 600px; /* Increased width for larger image */
+    height: 700; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.founder-info {
+    max-width: 600px; /* Limit width for better readability */
+    margin-top: 20px; /* Shift the description down */
+    margin-left: 50px;
+}
+
+.founder-info h2 {
+    margin-top: 0; /* Align the header with the top of the image */
+}
+
+.founder-bio, .founder-specialty, .founder-experience {
+    margin-bottom: 15px;
+}
+
+.founder-achievements, .founder-awards {
+    padding-left: 20px; /* Indent list items */
+}
+
+/* Titles and Text Styling */
+.founder-info h2,
+.director-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #8B3A6E; /* Darker shade for founder title */
+    font-weight: bold; /* Make the name bold */
+}
+
+.founder-info h3,
+.director-info h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #FF6F91; /* Consistent accent color */
+}
+
+.founder-bio, .founder-specialty, .founder-achievements,
+.director-bio, .director-specialty, .director-achievements {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Achievements with Slide-In Animation */
+.founder-achievements li,
+.director-achievements li {
+    opacity: 0;
+    transform: translateX(-20px); /* Slide from the left */
+    animation: slideIn 0.5s forwards;
+}
+
+.founder-achievements li:nth-child(1),
+.director-achievements li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.founder-achievements li:nth-child(2),
+.director-achievements li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.founder-achievements li:nth-child(3),
+.director-achievements li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*Treatment Page */
+/* Treatment Page */
+.treatment-section {
+    padding: 60px 0; /* Add padding to top and bottom */
+    background: linear-gradient(135deg, #FADCE4, #FFA07A); /* Background gradient */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative; /* Positioning context for description */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2em;
+    color: #333; /* Darker text for better readability */
+}
+
+.treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5em;
+}
+
+.treatment-card {
+    background: linear-gradient(135deg, #FADCE4, #ff9e9e); /* Gradient background for cards */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center; /* Center content */
+    padding: 20px; /* Padding inside cards */
+    margin: 15px; /* Margin around cards */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.treatment-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.treatment-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Description Section Positioned Above Footer */
+.treatment-description {
+    display: none; /* Initially hidden */
+    background: linear-gradient(135deg, #FADCE4, #dfaca2); /* Gradient background for description */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside description */
+    margin-top: 30px; /* Space above the description */
+    margin-bottom: 40px; /* Space below the description for footer gap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#description-title {
+    font-size: 24px; /* Title font size */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+#description-list {
+    list-style-type: disc; /* Disc style for list */
+    padding-left: 20px; /* Space before list */
+}
+
+.description {
+    padding: 1.5em;
+}
+
+.description h2 {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.description ul {
+    margin: 0;
+    padding-left: 1.5em;
+}
+
+/*Contact Us*/
+
+.contact-section {
+    background: linear-gradient(135deg, #FADCE4, #FFA07A);
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 350px;
+    height: 150px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.map-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.qr-code {
+    flex: 1;
+    padding: 20px;
+}
+
+.google-map {
+    flex: 2;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+}
