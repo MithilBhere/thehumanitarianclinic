@@ -479,19 +479,39 @@ footer {
     }
 
     .director-section {
-        flex-direction: row;
-        text-align: left;
+        flex-direction: column;
+        align-items: center; /* Center the image */
+        text-align: center; /* Center text in the description */
+        margin-top: 70px;
     }
-    .director-image {
-        margin-right: 20px;
+
+    .director-image img {
+        width: 100%; /* Make the image responsive to screen width */
+        max-width: 400px; /* Optional: set a max width for larger mobile screens */
+        margin-top: 20px;
+    }
+
+    .director-info {
+        max-width: 100%; /* Allow info to span full width */
+        margin-top: 20px; /* Space between image and text */
     }
 
     .founder-section {
-        flex-direction: row;
-        text-align: left;
+        flex-direction: column;
+        align-items: center; /* Center the image */
+        text-align: center; /* Center text in the description */
     }
-    .founder-image {
-        margin-right: 20px;
+
+    .founder-image img {
+        width: 100%; /* Make the image responsive to screen width */
+        max-width: 400px; /* Optional: set a max width for larger mobile screens */
+        margin-top: 20px;
+    }
+
+    .founder-info {
+        max-width: 100%; /* Allow info to span full width */
+        margin-top: 20px; /* Space between image and text */
+        margin-left: 0; /* Reset left margin for mobile view */
     }
 
     .modal-content {
@@ -944,7 +964,6 @@ footer {
 }
 
 
-/*Dirtector details*/
 .director-section {
     display: flex;
     align-items: flex-start;
@@ -1031,14 +1050,14 @@ footer {
 .founder-image img {
     margin-top: 30px;
     width: 600px; /* Increased width for larger image */
-    height: 700; /* Maintain the aspect ratio */
+    height: 750px; /* Maintain the aspect ratio */
     border-radius: 10px; /* Optional: rounded corners */
 }
 
 .founder-info {
     max-width: 600px; /* Limit width for better readability */
-    margin-top: 20px; /* Shift the description down */
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 50px; /* Shift the description down */
 }
 
 .founder-info h2 {
@@ -1104,7 +1123,6 @@ footer {
         transform: translateX(0);
     }
 }
-
 /*Treatment Page */
 /* Treatment Page */
 .treatment-section {
