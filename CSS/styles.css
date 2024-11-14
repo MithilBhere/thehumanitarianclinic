@@ -46,6 +46,10 @@ header {
     display: flex; /* Use flex for logo and title */
     align-items: center; /* Center items vertically */
 }
+.navbar-text h1,
+.navbar-text h2 {
+    margin: 0;
+}
 
 .navbar-right {
     display: flex;
@@ -410,6 +414,21 @@ footer {
         align-items: center;
         gap: 1em;
     }
+
+    .navbar-left {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        max-width: 80px;
+    }
+    .navbar-text h1 {
+        font-size: 1.5rem;
+    }
+    .navbar-text h2 {
+        font-size: 1rem;
+    }
+
 
     .hero-text {
         margin-top: 6em;
