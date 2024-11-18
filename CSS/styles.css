@@ -276,10 +276,14 @@ footer {
     align-items: flex-start;
 }
 
-/* Working Hours */
-.working-hours {
+/* Footer Sections */
+.footer-section {
     flex: 1;
     min-width: 250px;
+}
+
+/* Working Hours */
+.working-hours {
     padding-right: 20px;
 }
 
@@ -306,6 +310,7 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* For Saturday & Sunday Closed - More Professional Style */
 .working-hours li.closed-days {
     display: flex;
     justify-content: center; /* Center the text horizontally */
@@ -340,10 +345,9 @@ footer {
     font-size: 1em;
     text-align: right;
 }
+
 /* Social Links */
 .social-links {
-    flex: 1;
-    min-width: 250px;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
@@ -600,8 +604,7 @@ footer {
         padding: 0 20px;
     }
 
-    .working-hours,
-    .social-links {
+    .footer-section {
         min-width: 100%;
         border-right: none;
         padding-right: 0;
