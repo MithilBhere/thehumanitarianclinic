@@ -303,17 +303,13 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.working-hours li.saturday,
-.working-hours li.sunday {
-    justify-content: center; /* Center align Saturday and Sunday */
+.working-hours li.weekend {
+    justify-content: center; /* Center align for closed days */
     padding: 10px 0;
-    border-bottom: none; /* Remove borders for Closed days */
-}
-
-.timing.closed {
+    border-bottom: none; /* Remove borders for Closed row */
+    font-weight: bold;
     color: #ffa07a;
     font-size: 1em;
-    font-weight: bold;
 }
 
 .working-hours span {
@@ -369,6 +365,7 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 15px;
 }
+
 
 /* Responsive and Animated Styles */
 .menu-toggle {
