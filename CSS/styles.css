@@ -276,31 +276,32 @@ footer {
     align-items: flex-start;
 }
 
-/* Footer Sections */
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    padding-right: 20px;
-}
-
 /* Working Hours */
 .working-hours {
-    position: relative;
     flex: 1;
     min-width: 250px;
     padding-right: 30px;
 }
 
-/* Divider between sections (Working Hours and Social Links) */
-.working-hours::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Center it horizontally */
-    width: 2px; /* Thin line */
-    background-color: rgba(255, 255, 255, 0.3); /* Color of the line */
+/* Social Links */
+.social-links {
+    flex: 1;
+    min-width: 250px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Divider between timings and social links */
+.footer-divider {
+    display: inline-block;
+    width: 2px;
+    height: 60%;  /* Adjust height */
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 20px;  /* Space around the line */
 }
 
 /* Working Hours Header */
@@ -364,14 +365,6 @@ footer {
 }
 
 /* Social Links */
-.social-links {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
 .social-links h4 {
     color: #ffa07a;
     font-size: 1.3em;
@@ -403,6 +396,7 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 30px;
 }
+
 /* Responsive and Animated Styles */
 .menu-toggle {
     display: none;
@@ -613,7 +607,7 @@ footer {
         width: 150px; /* Smaller images for medium screens */
     }
 
-     .footer-container {
+    .footer-container {
         flex-direction: column;
         align-items: center;
         gap: 40px;
