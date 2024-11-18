@@ -304,21 +304,30 @@ footer {
 }
 
 .working-hours li.closed-days {
-    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;     /* Center-align text */
     padding: 15px 0;
-    border-bottom: none; /* Remove border for the "Closed" text */
+    border-bottom: none;    /* Remove border for "Closed" text */
     font-weight: bold;
     color: #ffa07a;
-    font-size: 1em;
+    font-size: 1.1em;
+}
+
+.working-hours li.closed-days span {
+    display: block;
+    margin-bottom: 5px; /* Add spacing between "Saturday & Sunday" and "Closed" */
 }
 
 .working-hours li.closed-days .timing {
     color: #ffffff;
     font-size: 1em;
     font-weight: normal;
-    margin-top: 5px;
 }
 
+/* Text styles for days */
 .working-hours span {
     color: #ffa07a;
     font-weight: bold;
@@ -372,7 +381,6 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 15px;
 }
-
 
 /* Responsive and Animated Styles */
 .menu-toggle {
@@ -584,7 +592,7 @@ footer {
         width: 150px; /* Smaller images for medium screens */
     }
 
-    .footer-container {
+.footer-container {
         flex-direction: column; /* Stack sections vertically */
         text-align: center;
         gap: 20px;
