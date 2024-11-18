@@ -314,11 +314,11 @@ footer {
     font-weight: bold;
     color: #ffa07a;
     font-size: 1.1em;
+    gap: 5px;               /* Space between lines */
 }
 
 .working-hours li.closed-days span {
     display: block;
-    margin-bottom: 5px; /* Add spacing between "Saturday & Sunday" and "Closed" */
 }
 
 .working-hours li.closed-days .timing {
@@ -331,7 +331,6 @@ footer {
 .working-hours span {
     color: #ffa07a;
     font-weight: bold;
-    min-width: 100px;
 }
 
 .timing {
