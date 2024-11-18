@@ -308,24 +308,23 @@ footer {
 
 .working-hours li.closed-days {
     display: flex;
-    flex-direction: column; /* Stack text vertically */
-    align-items: center;    /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    text-align: center;     /* Center-align text */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center;     /* Center the text vertically */
+    text-align: center;      /* Center-align the text */
     padding: 20px 0;
-    border-bottom: none;    /* Remove border for "Closed" text */
-    font-weight: bold;
-    color: #ffa07a;
-    font-size: 1.2em;
-    gap: 5px;               /* Space between lines */
-}
-
-.working-hours li.closed-days span {
-    display: block;
+    border-bottom: none;     /* Remove border for "Closed" text */
+    font-weight: normal;
+    color: #ffa07a;          /* Use the same accent color */
+    font-size: 1.1em;
+    text-transform: uppercase; /* To make it stand out more */
+    letter-spacing: 1px;      /* Adds space between letters for a modern touch */
+    background-color: #2c3e50; /* Subtle background to set it apart */
+    border-radius: 5px;      /* Rounded corners for a softer look */
+    padding: 15px 0;         /* Adjust padding for a balanced feel */
 }
 
 .working-hours li.closed-days .timing {
-    color: #ffffff;
+    color: #ffffff;          /* White color for the timing */
     font-size: 1em;
     font-weight: normal;
 }
@@ -341,7 +340,6 @@ footer {
     font-size: 1em;
     text-align: right;
 }
-
 /* Social Links */
 .social-links {
     flex: 1;
