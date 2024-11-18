@@ -205,12 +205,6 @@ header {
 /* Footer Styles */
 
 /* Footer General Styles */
-
-To make the footer responsive, we need to adjust the layout for different screen sizes, ensuring elements like working hours and social links stack vertically on smaller screens and adjust their widths appropriately. Here's how we can modify the existing CSS to achieve a responsive design:
-
-Updated CSS:
-css
-Copy code
 footer {
     background-color: #2c3e50;
     color: #ffffff;
@@ -386,6 +380,7 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 15px;
 }
+
 /* Responsive and Animated Styles */
 .menu-toggle {
     display: none;
@@ -656,7 +651,7 @@ footer {
         width: 120px; /* Further limit image width */
     }
 
-    .footer-container {
+   .footer-container {
         gap: 20px;
     }
 
@@ -672,7 +667,6 @@ footer {
     .footer-bottom {
         font-size: 0.8em;
     }
-
 }
 
 /* Keyframe Animations */
