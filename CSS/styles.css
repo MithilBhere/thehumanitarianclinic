@@ -303,13 +303,19 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.working-hours li.weekend {
-    justify-content: center; /* Center align for closed days */
+.working-hours li.closed-days {
+    display: flex;
+    flex-direction: column; /* Stack Saturday and Sunday */
+    text-align: center; /* Center-align the text */
     padding: 10px 0;
-    border-bottom: none; /* Remove borders for Closed row */
+    border-bottom: none; /* Remove bottom border for "Closed" */
     font-weight: bold;
     color: #ffa07a;
     font-size: 1em;
+}
+
+.working-hours .closed-days span {
+    margin-bottom: 5px; /* Add slight spacing between Saturday and Sunday */
 }
 
 .working-hours span {
@@ -365,7 +371,6 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 15px;
 }
-
 
 /* Responsive and Animated Styles */
 .menu-toggle {
