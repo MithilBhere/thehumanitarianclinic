@@ -298,10 +298,10 @@ footer {
 /* Divider between timings and social links */
 .footer-divider {
     display: inline-block;
-    width: 2px;
-    height: 60%;  /* Adjust height */
-    background-color: rgba(255, 255, 255, 0.3);
-    margin: 0 20px;  /* Space around the line */
+    width: 1px;               /* Adjust width of the line */
+    height: 100%;             /* Set height to full available height */
+    background-color: #ffffff; /* Set color of the line to white */
+    margin: 0 20px;           /* Space around the line */
 }
 
 /* Working Hours Header */
@@ -607,7 +607,7 @@ footer {
         width: 150px; /* Smaller images for medium screens */
     }
 
-    .footer-container {
+   .footer-container {
         flex-direction: column;
         align-items: center;
         gap: 40px;
