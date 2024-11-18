@@ -304,18 +304,19 @@ footer {
 }
 
 .working-hours li.closed-days {
-    display: flex;
-    flex-direction: column; /* Stack Saturday and Sunday */
-    text-align: center; /* Center-align the text */
-    padding: 10px 0;
-    border-bottom: none; /* Remove bottom border for "Closed" */
+    text-align: center; /* Center-align text */
+    padding: 15px 0;
+    border-bottom: none; /* Remove border for the "Closed" text */
     font-weight: bold;
     color: #ffa07a;
     font-size: 1em;
 }
 
-.working-hours .closed-days span {
-    margin-bottom: 5px; /* Add slight spacing between Saturday and Sunday */
+.working-hours li.closed-days .timing {
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 5px;
 }
 
 .working-hours span {
@@ -371,6 +372,7 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 15px;
 }
+
 
 /* Responsive and Animated Styles */
 .menu-toggle {
@@ -582,27 +584,30 @@ footer {
         width: 150px; /* Smaller images for medium screens */
     }
 
-.footer-container {
-        flex-direction: column;
-        align-items: center;
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
         text-align: center;
+        gap: 20px;
     }
 
     .working-hours {
-        border-right: none;
+        border-right: none; /* Remove border for smaller screens */
         padding-right: 0;
     }
 
+    .working-hours ul li {
+        flex-direction: column; /* Stack day and time vertically */
+        text-align: center;
+        padding: 10px 0;
+    }
+
     .social-links {
-        padding-left: 0;
+        padding-left: 0; /* Remove padding on smaller screens */
     }
 
-    .working-hours ul {
-        font-size: 0.9em;
-    }
-
-    .icon-group {
-        justify-content: center;
+    .social-links h4,
+    .working-hours h4 {
+        font-size: 1.1em; /* Adjust font size for smaller screens */
     }
 }
 
@@ -634,21 +639,24 @@ footer {
         width: 120px; /* Further limit image width */
     }
 
-    .working-hours h4,
-    .social-links h4 {
-        font-size: 1rem;
+    .footer-container {
+        padding: 0 10px; /* Reduce padding for extra small screens */
     }
 
-    .working-hours ul {
-        font-size: 0.85em;
+    .working-hours ul li {
+        font-size: 0.9em; /* Slightly reduce font size */
+    }
+
+    .social-links h4 {
+        font-size: 1em;
+    }
+
+    .icon-group {
+        gap: 10px; /* Reduce gap between social icons */
     }
 
     .social-icon {
-        font-size: 1.2em;
-    }
-
-    .footer-bottom {
-        font-size: 0.8em;
+        font-size: 1.2em; /* Reduce icon size */
     }
 
 }
