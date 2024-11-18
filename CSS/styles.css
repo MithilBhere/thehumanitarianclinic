@@ -280,13 +280,16 @@ footer {
 .footer-section {
     flex: 1;
     min-width: 250px;
-}
-
-/* Working Hours */
-.working-hours {
     padding-right: 20px;
 }
 
+/* Divider between sections (Working Hours and Social Links) */
+.footer-section.working-hours {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding-right: 30px;
+}
+
+/* Working Hours */
 .working-hours h4 {
     color: #ffa07a;
     margin-bottom: 15px;
@@ -652,7 +655,7 @@ footer {
         width: 120px; /* Further limit image width */
     }
 
-   .footer-container {
+  .footer-container {
         gap: 25px;
     }
 
