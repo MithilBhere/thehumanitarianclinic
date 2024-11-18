@@ -205,6 +205,12 @@ header {
 /* Footer Styles */
 
 /* Footer General Styles */
+
+To make the footer responsive, we need to adjust the layout for different screen sizes, ensuring elements like working hours and social links stack vertically on smaller screens and adjust their widths appropriately. Here's how we can modify the existing CSS to achieve a responsive design:
+
+Updated CSS:
+css
+Copy code
 footer {
     background-color: #2c3e50;
     color: #ffffff;
@@ -380,7 +386,6 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 15px;
 }
-
 /* Responsive and Animated Styles */
 .menu-toggle {
     display: none;
@@ -591,30 +596,35 @@ footer {
         width: 150px; /* Smaller images for medium screens */
     }
 
-.footer-container {
-        flex-direction: column; /* Stack sections vertically */
-        text-align: center;
-        gap: 20px;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0 20px;
     }
 
-    .working-hours {
-        border-right: none; /* Remove border for smaller screens */
+    .working-hours,
+    .social-links {
+        min-width: 100%;
+        border-right: none;
         padding-right: 0;
+        text-align: center;
     }
 
-    .working-hours ul li {
-        flex-direction: column; /* Stack day and time vertically */
-        text-align: center;
-        padding: 10px 0;
+    .working-hours ul {
+        font-size: 1em;
     }
 
     .social-links {
-        padding-left: 0; /* Remove padding on smaller screens */
+        gap: 15px;
     }
 
-    .social-links h4,
-    .working-hours h4 {
-        font-size: 1.1em; /* Adjust font size for smaller screens */
+    .icon-group {
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        font-size: 1em;
     }
 }
 
@@ -647,23 +657,20 @@ footer {
     }
 
     .footer-container {
-        padding: 0 10px; /* Reduce padding for extra small screens */
+        gap: 20px;
     }
 
-    .working-hours ul li {
-        font-size: 0.9em; /* Slightly reduce font size */
-    }
-
+    .working-hours h4,
     .social-links h4 {
-        font-size: 1em;
-    }
-
-    .icon-group {
-        gap: 10px; /* Reduce gap between social icons */
+        font-size: 1.1em;
     }
 
     .social-icon {
-        font-size: 1.2em; /* Reduce icon size */
+        font-size: 1.3em;
+    }
+
+    .footer-bottom {
+        font-size: 0.8em;
     }
 
 }
