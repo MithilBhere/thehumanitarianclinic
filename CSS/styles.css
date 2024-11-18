@@ -303,10 +303,19 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.working-hours li.weekend {
+    justify-content: center; /* Center align Saturday and Sunday */
+    border-bottom: none; /* Remove borders for Saturday and Sunday */
+}
+
 .working-hours .closed-days {
     text-align: center;
-    border: none; /* Remove border for combined closed days */
-    padding: 10px 0;
+    color: #ffa07a;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: -5px; /* Slightly adjust position */
+    border: none;
+    padding-top: 5px;
 }
 
 .working-hours span {
