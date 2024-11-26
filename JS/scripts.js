@@ -371,7 +371,6 @@ function resetAutoScroll() {
 
 // Start the auto scrolling when the page loads
 window.onload = autoScroll;
-
 // Horizontal scrolling
 function scrollGallery(direction) {
     const gallery = document.querySelector('.gallery');
