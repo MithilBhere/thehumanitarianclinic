@@ -373,17 +373,25 @@ function resetAutoScroll() {
 // Start the auto scrolling when the page loads
 window.onload = autoScroll;
 
-// Run animation when content loads
-document.addEventListener('DOMContentLoaded', animateOnScroll);
+// Horizontal scrolling
+function scrollGallery(direction) {
+    const gallery = document.querySelector('.gallery');
+    const scrollAmount = gallery.clientWidth / 2;
+    gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+  
+  // Open image in modal
+  function openImage(imgElement) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    modal.style.display = 'flex';
+    modalImage.src = imgElement.src;
+  }
+  
+  // Close modal
+  function closeImage() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+  }
+  
 
-// Add hover effect to cards
-const cards = document.querySelectorAll('.contact-card');
-cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-5px)';
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-    });
-});
