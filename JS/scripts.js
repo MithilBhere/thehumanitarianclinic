@@ -38,27 +38,26 @@ navLinks.forEach(link => {
 
 // Gallery Animation
 
-// Function to toggle image enlargement
-function toggleImage(imgElement) {
-    const overlay = document.getElementById('overlay');
-    if (overlay.style.display === 'flex') {
-        closeImage();
-    } else {
-        overlay.style.display = 'flex';
-        const enlargedImg = document.createElement('img');
-        enlargedImg.src = imgElement.src;
-        overlay.innerHTML = '';
-        overlay.appendChild(enlargedImg);
-    }
+// Horizontal scrolling
+function scrollGallery(direction) {
+    const gallery = document.querySelector('.gallery');
+    const scrollAmount = gallery.clientWidth / 2;
+    gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
 }
 
-// Function to close the enlarged image
+// Open image in lightbox
+function openImage(imgElement) {
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    lightbox.style.display = 'flex';
+    lightboxImage.src = imgElement.src;
+}
+
+// Close lightbox
 function closeImage() {
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
-    overlay.innerHTML = '';
+    const lightbox = document.getElementById('imageLightbox');
+    lightbox.style.display = 'none';
 }
-
 
 //toogle menu 
 function toggleMenu() {
