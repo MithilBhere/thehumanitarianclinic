@@ -757,6 +757,7 @@ footer {
 .equipment-wrapper {
     display: flex;
     width: calc(220px * 17); /* Total width for 17 images */
+    animation: scroll 60s linear infinite; /* Set duration for continuous scrolling */
 }
 
 .equipment-image {
@@ -777,7 +778,6 @@ footer {
     0% { transform: translateX(0); }
     100% { transform: translateX(-calc(220px * 17)); } /* Scroll through all images */
 }
-
 /*Gallery Section*/
 
 /* Gallery Section Wrapper */
