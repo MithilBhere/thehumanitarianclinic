@@ -372,3 +372,18 @@ function resetAutoScroll() {
 
 // Start the auto scrolling when the page loads
 window.onload = autoScroll;
+
+// Run animation when content loads
+document.addEventListener('DOMContentLoaded', animateOnScroll);
+
+// Add hover effect to cards
+const cards = document.querySelectorAll('.contact-card');
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-5px)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+    });
+});
