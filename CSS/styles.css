@@ -611,13 +611,22 @@ footer {
         margin: 10px;
       }
 
-    .equipment-heading {
-        font-size: 2em; /* Smaller heading on medium screens */
-    }
+  .equipment-section {
+    width: 95%; /* Increase the width to use more screen space */
+  }
 
-    .equipment-image {
-        width: 150px; /* Smaller images for medium screens */
-    }
+  .equipment-item {
+    width: 150px; /* Reduce the width of images */
+    margin-right: 15px; /* Adjust margin */
+  }
+
+  .equipment-heading {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .equipment-container {
+    justify-content: flex-start; /* Align images to the left */
+  }
 
    .footer-container {
         flex-direction: column;
@@ -666,13 +675,22 @@ footer {
         gap: 2em;
     }
 
-    .equipment-heading {
-        font-size: 1.5em; /* Smaller heading on small screens */
-    }
+  .equipment-section {
+    width: 100%; /* Full width for mobile */
+  }
 
-    .equipment-image {
-        width: 120px; /* Further limit image width */
-    }
+  .equipment-item {
+    width: 120px; /* Further reduce image size */
+    margin-right: 10px; /* Adjust margin */
+  }
+
+  .equipment-heading {
+    font-size: 1.2rem; /* Smaller heading font for mobile */
+  }
+
+  .equipment-container {
+    justify-content: flex-start; /* Align images to the left */
+  }
 
     .footer-container {
         gap: 25px;
@@ -729,55 +747,55 @@ footer {
 /*Equipment Section */
 
 
-/* Equipment Section Wrapper */
 .equipment-section {
-    text-align: center;
-    margin: 50px 0;
+  width: 90%; /* Reduce width to 90% for smaller screens */
+  max-width: 1200px; /* Maximum width for large screens */
+  margin: 0 auto; /* Center the section horizontally */
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; /* Space for the heading */
 }
 
-/* Heading Styling */
 .equipment-heading {
-    font-size: 2.5em; /* Larger heading for emphasis */
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-    text-transform: uppercase;
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: #333; /* Dark color for the heading */
+  margin-bottom: 20px; /* Space between heading and equipment images */
 }
 
-/* Equipment styling */
-.equipment {
-    position: relative;
-    overflow: hidden; /* Hide overflow to create a clean look */
-    width: 100%;
-    max-width: 1200px; /* Limit width for larger screens */
-    margin: auto; /* Center the section */
-    padding: 20px;
+.equipment-container {
+  display: flex;
+  justify-content: center; /* Center the equipment images horizontally */
+  width: 100%;
+  overflow: hidden; /* Hide overflowing images */
 }
 
-.equipment-wrapper {
-    display: flex;
-    width: calc(220px * 17); /* Total width for 17 images */
-    animation: scroll 60s linear infinite; /* Set duration for continuous scrolling */
+.equipment-images {
+  display: flex;
+  animation: scrollLeft 60s linear infinite; /* Adjusted scroll time */
 }
 
-.equipment-image {
-    width: 220px; /* Fixed width for images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 0 10px; /* Space between images */
-    transition: transform 0.3s ease; /* Smooth scaling on hover */
+.equipment-item {
+  width: 200px; /* Fixed width for each image on larger screens */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 20px; /* Space between the images */
+  transition: transform 0.3s ease;
 }
 
-.equipment-image:hover {
-    transform: scale(1.05); /* Slightly enlarge image on hover */
+.equipment-item:hover {
+  transform: scale(1.1); /* Optional hover effect */
 }
 
-/* Keyframe Animation */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-calc(220px * 17)); } /* Scroll through all images */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0); /* Start from the left side */
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll all the way to the left */
+  }
 }
+
 /*Gallery Section*/
 
 /* Gallery Section Wrapper */
