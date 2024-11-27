@@ -330,47 +330,19 @@ cards.forEach(card => {
     });
 });
 
-let scrollInterval; // To hold the setInterval reference
+//equipment
+// Optional: If you want more control over the animation (pause on hover, etc.)
+const equipmentSection = document.querySelector('.equipment-section');
+const equipmentImages = document.querySelector('.equipment-images');
 
-function autoScroll() {
-    const gallery = document.getElementById('equipmentGallery');
-    scrollInterval = setInterval(() => {
-        gallery.scrollBy({
-            top: 0,
-            left: 220, // Scroll right by the width of one image
-            behavior: 'smooth'
-        });
-    }, 3000); // Change scroll every 3 seconds
-}
+// Pause the animation on hover
+equipmentSection.addEventListener('mouseenter', () => {
+  equipmentImages.style.animationPlayState = 'paused';
+});
 
-function scrollLeft() {
-    const gallery = document.getElementById('equipmentGallery');
-    gallery.scrollBy({
-        top: 0,
-        left: -220, // Scroll left by the width of one image
-        behavior: 'smooth'
-    });
-    resetAutoScroll(); // Reset auto scrolling
-}
-
-function scrollRight() {
-    const gallery = document.getElementById('equipmentGallery');
-    gallery.scrollBy({
-        top: 0,
-        left: 220, // Scroll right by the width of one image
-        behavior: 'smooth'
-    });
-    resetAutoScroll(); // Reset auto scrolling
-}
-
-// Reset the auto scrolling
-function resetAutoScroll() {
-    clearInterval(scrollInterval); // Clear the existing interval
-    autoScroll(); // Start it again
-}
-
-// Start the auto scrolling when the page loads
-window.onload = autoScroll;
+equipmentSection.addEventListener('mouseleave', () => {
+  equipmentImages.style.animationPlayState = 'running';
+});
 // Horizontal scrolling
 function scrollGallery(direction) {
     const gallery = document.querySelector('.gallery');
