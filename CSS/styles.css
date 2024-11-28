@@ -769,13 +769,13 @@ footer {
 
 .equipment-images {
   display: flex;
-  animation: scrollLeft 30s linear infinite; /* Adjusted scroll time */
+  animation: scrollLeft 30s linear infinite; /* Smooth continuous scroll */
 }
 
 .equipment-item {
   flex: 0 0 auto; /* Prevent flex shrinking */
-  width: 150px; /* Adjusted width for smaller screens */
-  height: auto; /* Maintain the aspect ratio */
+  width: 150px; /* Adjusted width for images */
+  height: auto; /* Maintain aspect ratio */
   margin-right: 15px; /* Space between the images */
   transition: transform 0.3s ease;
 }
@@ -786,12 +786,13 @@ footer {
 
 @keyframes scrollLeft {
   0% {
-    transform: translateX(0); /* Start from the left side */
+    transform: translateX(0); /* Start from the left */
   }
   100% {
-    transform: translateX(-200%); /* Scroll across all images (adjust as needed) */
+    transform: translateX(-100%); /* Scroll all the way to hide the last image */
   }
 }
+
 /*Gallery Section*/
 
 /* Gallery Section Wrapper */
