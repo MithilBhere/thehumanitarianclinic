@@ -611,7 +611,7 @@ footer {
         margin: 10px;
       }
 
-  .equipment-item {
+   .equipment-item {
     width: 120px; /* Smaller images for mobile view */
     margin-right: 10px;
   }
@@ -625,7 +625,7 @@ footer {
   }
 
   .equipment-images {
-    animation: scrollLeft 40s linear infinite; /* Slow down scrolling for better visibility */
+    animation: scrollLeft 30s linear infinite; /* Slow down scrolling for better visibility */
   }
 
 
@@ -794,10 +794,9 @@ footer {
     transform: translateX(0); /* Start from the left side */
   }
   100% {
-    transform: translateX(-100%); /* Scroll all the way to the left */
+    transform: translateX(-200%); /* Scroll across all images (adjust as needed) */
   }
 }
-
 /*Gallery Section*/
 
 /* Gallery Section Wrapper */
