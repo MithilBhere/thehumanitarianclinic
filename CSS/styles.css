@@ -672,21 +672,18 @@ footer {
         gap: 2em;
     }
 
-  .equipment-section {
-    width: 100%; /* Full width for mobile */
+  .equipment-item {
+    width: 80px; /* Smaller images for mobile view */
+    margin-right: 8px; /* Adjust spacing for mobile */
   }
 
-  .equipment-item {
-    width: 120px; /* Further reduce image size */
-    margin-right: 10px; /* Adjust margin */
+  .equipment-images {
+    width: calc(80px * 17 + 8px * 16); /* Recalculate total width for mobile */
+    animation: scrollLeft 50s linear infinite; /* Slower scroll for better visibility */
   }
 
   .equipment-heading {
-    font-size: 1.2rem; /* Smaller heading font for mobile */
-  }
-
-  .equipment-container {
-    justify-content: flex-start; /* Align images to the left */
+    font-size: 1.2rem; /* Further reduce heading size */
   }
 
     .footer-container {
