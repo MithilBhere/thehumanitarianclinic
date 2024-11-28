@@ -773,7 +773,7 @@ footer {
 
 .equipment-images {
   display: flex;
-  animation: scrollLeft 60s linear infinite; /* Adjusted scroll time */
+  animation: scrollLeft 30s linear infinite; /* Adjusted scroll time */
 }
 
 .equipment-item {
