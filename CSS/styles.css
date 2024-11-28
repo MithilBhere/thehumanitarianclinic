@@ -612,16 +612,17 @@ footer {
       }
 
      .equipment-item {
-    width: 120px; /* Smaller images for mobile view */
-    margin-right: 10px;
+    width: 100px; /* Smaller images for mobile */
+    margin-right: 10px; /* Adjust spacing */
+  }
+
+  .equipment-images {
+    width: calc(100px * 17 + 10px * 16); /* Recalculate total width for mobile */
+    animation: scrollLeft 40s linear infinite; /* Slower scroll for better visibility */
   }
 
   .equipment-heading {
     font-size: 1.5rem; /* Reduce heading size */
-  }
-
-  .equipment-images {
-    animation: scrollLeft 40s linear infinite; /* Slow down scrolling for better visibility */
   }
 
    .footer-container {
@@ -762,19 +763,20 @@ footer {
 
 .equipment-container {
   display: flex;
-  justify-content: center; /* Center the equipment images horizontally */
+  justify-content: flex-start; /* Align images to the left */
   width: 100%;
   overflow: hidden; /* Hide overflowing images */
 }
 
 .equipment-images {
   display: flex;
-  animation: scrollLeft 30s linear infinite; /* Smooth continuous scroll */
+  animation: scrollLeft 30s linear infinite; /* Continuous smooth scroll */
+  width: calc(150px * 17 + 15px * 16); /* Calculate total width of images + margins */
 }
 
 .equipment-item {
   flex: 0 0 auto; /* Prevent flex shrinking */
-  width: 150px; /* Adjusted width for images */
+  width: 150px; /* Fixed width for larger screens */
   height: auto; /* Maintain aspect ratio */
   margin-right: 15px; /* Space between the images */
   transition: transform 0.3s ease;
@@ -789,9 +791,10 @@ footer {
     transform: translateX(0); /* Start from the left */
   }
   100% {
-    transform: translateX(-100%); /* Scroll all the way to hide the last image */
+    transform: translateX(-100%); /* Scroll across all images */
   }
 }
+
 
 /*Gallery Section*/
 
