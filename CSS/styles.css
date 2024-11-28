@@ -611,7 +611,7 @@ footer {
         margin: 10px;
       }
 
-   .equipment-item {
+     .equipment-item {
     width: 120px; /* Smaller images for mobile view */
     margin-right: 10px;
   }
@@ -620,14 +620,9 @@ footer {
     font-size: 1.5rem; /* Reduce heading size */
   }
 
-  .equipment-container {
-    justify-content: flex-start; /* Align items to start on smaller screens */
-  }
-
   .equipment-images {
-    animation: scrollLeft 30s linear infinite; /* Slow down scrolling for better visibility */
+    animation: scrollLeft 40s linear infinite; /* Slow down scrolling for better visibility */
   }
-
 
    .footer-container {
         flex-direction: column;
